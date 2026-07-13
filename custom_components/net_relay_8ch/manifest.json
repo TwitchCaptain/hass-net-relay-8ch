@@ -1,0 +1,12 @@
+{
+  "domain": "net_relay_8ch",
+  "name": "8 Channel Network Relay Board",
+  "codeowners": ["@davidnewhall", "@TwitchCaptain"],
+  "config_flow": true,
+  "documentation": "https://github.com/TwitchCaptain/hass-net-relay-8ch",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/TwitchCaptain/hass-net-relay-8ch/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

@@ -1,0 +1,76 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "8 Channel Network Relay Board",
+        "description": "Supports classic TCP (ZM / port 1234) and HTTP CGI (v5.8+). Auto-detect tries TCP first.",
+        "data": {
+          "host": "Host",
+          "name": "Name",
+          "protocol": "Protocol",
+          "port": "Port (optional — auto uses 1234 or 80)",
+          "scan_interval": "Poll interval (seconds)",
+          "pulse_seconds": "Default pulse duration (seconds)",
+          "username": "HTTP username",
+          "password": "HTTP password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the board. Check host, protocol, port, and credentials."
+    },
+    "abort": {
+      "already_configured": "This relay board is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Relay board options",
+        "data": {
+          "scan_interval": "Poll interval (seconds)",
+          "pulse_seconds": "Default pulse duration (seconds)",
+          "relay_name_1": "Relay 1 name",
+          "relay_name_2": "Relay 2 name",
+          "relay_name_3": "Relay 3 name",
+          "relay_name_4": "Relay 4 name",
+          "relay_name_5": "Relay 5 name",
+          "relay_name_6": "Relay 6 name",
+          "relay_name_7": "Relay 7 name",
+          "relay_name_8": "Relay 8 name",
+          "input_name_1": "Input 1 name",
+          "input_name_2": "Input 2 name",
+          "input_name_3": "Input 3 name",
+          "input_name_4": "Input 4 name",
+          "input_name_5": "Input 5 name",
+          "input_name_6": "Input 6 name",
+          "input_name_7": "Input 7 name",
+          "input_name_8": "Input 8 name"
+        }
+      }
+    }
+  },
+  "entity": {
+    "switch": {
+      "relay": {
+        "name": "Relay {channel}"
+      }
+    }
+  },
+  "services": {
+    "pulse": {
+      "name": "Pulse relay",
+      "description": "Momentarily energize relay switch entities.",
+      "fields": {
+        "entity_id": {
+          "name": "Entity",
+          "description": "Relay switch entity/entities to pulse."
+        },
+        "duration": {
+          "name": "Duration",
+          "description": "Pulse length in seconds."
+        }
+      }
+    }
+  }
+}

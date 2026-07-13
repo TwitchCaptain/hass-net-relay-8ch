@@ -1,0 +1,20 @@
+pulse:
+  name: Pulse relay
+  description: Momentarily energize one or more relay switch entities.
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          multiple: true
+          integration: net_relay_8ch
+          domain: switch
+    duration:
+      name: Duration
+      description: Override pulse length in seconds (default uses the Pulse duration number).
+      selector:
+        number:
+          min: 0.05
+          max: 60
+          step: 0.05
+          unit_of_measurement: seconds
