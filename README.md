@@ -97,4 +97,4 @@ CI runs pytest, ruff, [hassfest](https://github.com/home-assistant/actions), and
 
 ## License
 
-[MIT](LICENSE) © 2026 [Go Lift Technologies LLC](https://golift.io)
+[MIT](LICENSE) © 2026 [David Newhall II](https://twitchcaptain.com)
