@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from datetime import timedelta
 import logging
+from datetime import timedelta
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, CONF_NAME, CONF_PORT, CONF_SCAN_INTERVAL
@@ -79,7 +79,7 @@ class NetRelayCoordinator(DataUpdateCoordinator[BoardState]):
     async def _async_update_data(self) -> BoardState:
         try:
             return await self.client.async_get_state()
-        except Exception as err:  # noqa: BLE001
+        except Exception as err:
             raise UpdateFailed(
                 f"Error communicating with relay board {self.entry.data[CONF_HOST]}:{self.entry.data.get(CONF_PORT)}: {err}"
             ) from err

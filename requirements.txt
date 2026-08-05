@@ -1,0 +1,2 @@
+# Mirrors custom_components/net_relay_8ch/manifest.json — used by CI and Dependabot.
+# aiohttp is provided by Home Assistant (no extra pip pin).

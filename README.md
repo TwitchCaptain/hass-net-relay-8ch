@@ -83,6 +83,18 @@ Add `https://github.com/TwitchCaptain/hass-net-relay-8ch` as a custom integratio
 - Domoticz RelayNet reference: TCP + optional HTTP POST
 - Board reverse notes: https://github.com/mgx0/ZMRN0808-V5
 
+## Development
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt -r requirements_test.txt
+pytest -q tests
+ruff check custom_components/net_relay_8ch tests
+```
+
+CI runs pytest, ruff, [hassfest](https://github.com/home-assistant/actions), and HACS validation on every push/PR.
+
 ## License
 
-[MIT](LICENSE) © 2026 [Go Lift Technologies LLC](https://golift.io)
+[MIT](LICENSE) © 2026 [David Newhall II](https://twitchcaptain.com)

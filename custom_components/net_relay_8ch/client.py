@@ -3,13 +3,12 @@
 from __future__ import annotations
 
 import asyncio
-from dataclasses import dataclass, field
 import logging
 import re
+from dataclasses import dataclass, field
 from typing import Any
 
 import aiohttp
-
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
@@ -177,7 +176,7 @@ class NetRelayClient:
                 writer.close()
                 try:
                     await writer.wait_closed()
-                except Exception:  # noqa: BLE001
+                except Exception:  # noqa: BLE001, S110
                     pass
         if not payload.strip():
             raise ConnectionError(f"Empty DUMP from {self.host}:{self.port}")
@@ -201,7 +200,7 @@ class NetRelayClient:
                 writer.close()
                 try:
                     await writer.wait_closed()
-                except Exception:  # noqa: BLE001
+                except Exception:  # noqa: BLE001, S110
                     pass
 
     def _http_auth(self) -> aiohttp.BasicAuth:
