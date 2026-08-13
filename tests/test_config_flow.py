@@ -35,7 +35,7 @@ def _patch_detect(protocol=PROTOCOL_TCP, port=1234, side_effect=None):
 def _patch_setup():
     return patch(
         "custom_components.net_relay_8ch.async_setup_entry",
-        return_value=True,
+        new=AsyncMock(return_value=True),
     )
 
 
